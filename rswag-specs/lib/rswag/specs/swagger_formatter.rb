@@ -129,7 +129,7 @@ module Rswag
       end
 
       def upgrade_content!(mime_list, target_node)
-        target_node[:content] ||= {} # Here we're avoiding "content" key overriding
+        target_node[:content] ||= {}
         schema = target_node[:schema]
         return if mime_list.empty? || schema.nil?
 
